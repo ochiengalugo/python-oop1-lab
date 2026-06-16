@@ -3,8 +3,7 @@
 class Book:
     def __init__(self, title, page_count):
         self.title = title
-        # Setting this via the property setter ensures validation happens at initialization
-        self.page_count = page_count 
+        self.page_count = page_count  # Triggers the setter validation
 
     @property
     def page_count(self):
@@ -19,5 +18,3 @@ class Book:
 
     def turn_page(self):
         print("Flipping the page...wow, you read fast!")
-    
-        
