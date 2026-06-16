@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 class Coffee:
+    pass
+
     def __init__(self, size, price):
         self.size = size  # Triggers the setter validation
         self.price = price
