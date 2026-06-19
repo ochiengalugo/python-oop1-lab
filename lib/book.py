@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 class Book:
     def __init__(self, title, page_count):
         self.title = title
@@ -10,8 +12,9 @@ class Book:
     @page_count.setter
     def page_count(self, value):
         if not isinstance(value, int):
-            raise TypeError("page_count must be an integer")
+            print("page_count must be an integer")
+            return
         self._page_count = value
 
     def turn_page(self):
-        print("Flipping the page...")
+        print("Flipping the page...wow, you read fast!")
