@@ -1,11 +1,7 @@
-#!/usr/bin/env python3
-
 class Book:
-    pass
-
     def __init__(self, title, page_count):
         self.title = title
-        self.page_count = page_count  # Triggers the setter validation
+        self.page_count = page_count
 
     @property
     def page_count(self):
@@ -14,11 +10,8 @@ class Book:
     @page_count.setter
     def page_count(self, value):
         if not isinstance(value, int):
-            print("page_count must be an integer")
-            return
+            raise TypeError("page_count must be an integer")
         self._page_count = value
 
     def turn_page(self):
-        print("Flipping the page...wow, you read fast!")
-    
-        
+        print("Flipping the page...")
